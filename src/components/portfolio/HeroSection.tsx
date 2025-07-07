@@ -46,13 +46,13 @@ const HeroSection = () => {
           ref={titleRef}
           className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent"
         >
-          Creative Developer
+          Malleswari Kurangi
         </h1>
         <p 
           ref={subtitleRef}
           className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
         >
-          Crafting digital experiences with modern web technologies,
+          Full Stack Web Developer crafting digital experiences with modern technologies,
           <br />
           bringing ideas to life through code and creativity.
         </p>

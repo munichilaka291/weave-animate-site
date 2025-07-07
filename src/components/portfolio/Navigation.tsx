@@ -23,7 +23,7 @@ const Navigation = () => {
     <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 p-6">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Portfolio
+          Malleswari Kurangi
         </div>
         <div className="hidden md:flex space-x-8">
           {['home', 'about', 'projects', 'contact'].map((item) => (

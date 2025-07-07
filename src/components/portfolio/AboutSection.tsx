@@ -27,12 +27,12 @@ const AboutSection = () => {
 
   const skills = [
     'React & Next.js',
+    'Node.js & Express',
     'TypeScript',
+    'MongoDB & PostgreSQL',
     'Three.js & WebGL',
     'GSAP Animations',
-    'Node.js',
-    'Python',
-    'UI/UX Design',
+    'Python & Django',
     'Cloud Architecture'
   ];
 
@@ -44,14 +44,15 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            I'm a passionate full-stack developer with a love for creating immersive 
-            digital experiences. With expertise in modern web technologies and a keen 
-            eye for design, I transform complex ideas into elegant, functional solutions.
+            I'm Malleswari Kurangi, a passionate full-stack web developer with expertise 
+            in both frontend and backend technologies. I love creating seamless user 
+            experiences while building robust server-side solutions that scale.
           </p>
           <p className="text-lg text-gray-300 leading-relaxed">
-            When I'm not coding, you'll find me exploring new technologies, 
-            contributing to open-source projects, or experimenting with creative 
-            coding and generative art.
+            With experience across the entire web development stack, I bring ideas to life 
+            from concept to deployment. When I'm not coding, you'll find me exploring new 
+            technologies, contributing to open-source projects, or experimenting with 
+            creative coding and animations.
           </p>
         </div>
         
