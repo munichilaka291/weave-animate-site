@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, Download } from 'lucide-react';
 
 const ContactSection = () => {
   const contactRef = useRef<HTMLDivElement>(null);
@@ -49,6 +49,16 @@ const ContactSection = () => {
     { icon: Twitter, href: "https://twitter.com", label: "Twitter" }
   ];
 
+  const handleDownloadResume = () => {
+    // Create a sample resume download - in a real scenario, you'd link to your actual resume file
+    const link = document.createElement('a');
+    link.href = '/path-to-your-resume.pdf'; // Update this path to your actual resume file
+    link.download = 'Malleswari_Kurangi_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="contact" className="portfolio-section min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -61,12 +71,20 @@ const ContactSection = () => {
             <h3 className="text-3xl font-semibold mb-8 text-purple-400">
               Ready to work together?
             </h3>
-            <p className="text-lg text-gray-300 leading-relaxed mb-12">
+            <p className="text-lg text-gray-300 leading-relaxed mb-8">
               I'm always excited to collaborate on new projects and bring 
               innovative ideas to life. Whether you need a complete web 
               application or want to add some creative flair to your existing 
               project, let's discuss how we can work together.
             </p>
+            
+            <button 
+              onClick={handleDownloadResume}
+              className="mb-8 px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-2xl flex items-center gap-2"
+            >
+              <Download size={20} />
+              Download My Resume
+            </button>
             
             <div className="flex space-x-6">
               {socialLinks.map(({ icon: Icon, href, label }) => (

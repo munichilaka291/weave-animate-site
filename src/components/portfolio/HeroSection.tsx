@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
+import { Download } from 'lucide-react';
 
 gsap.registerPlugin(TextPlugin);
 
@@ -39,6 +40,16 @@ const HeroSection = () => {
     });
   }, []);
 
+  const handleDownloadResume = () => {
+    // Create a sample resume download - in a real scenario, you'd link to your actual resume file
+    const link = document.createElement('a');
+    link.href = '/path-to-your-resume.pdf'; // Update this path to your actual resume file
+    link.download = 'Malleswari_Kurangi_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="portfolio-section min-h-screen flex items-center justify-center relative">
       <div ref={heroRef} className="text-center z-10 max-w-4xl mx-auto px-6">
@@ -62,6 +73,13 @@ const HeroSection = () => {
           </button>
           <button className="px-8 py-4 border-2 border-purple-400 rounded-full font-semibold hover:bg-purple-400 hover:text-black transition-all duration-300">
             Get In Touch
+          </button>
+          <button 
+            onClick={handleDownloadResume}
+            className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-500 rounded-full font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-2xl flex items-center gap-2 justify-center"
+          >
+            <Download size={20} />
+            Download Resume
           </button>
         </div>
       </div>
